@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import API01 from "./hook/API01";
+import H1 from "./hook/H1";
+import H2 from "./hook/H2";
+import React, { useState, useEffect } from 'react'
+import H3 from "./hook/H3";
 
-function App() {
+export default function App() {
+  const [show, setShow] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   //  <H1/>
+   //<H2/>
+   <div>
+    {
+     show?<H3/> :"Not show here"
+     
+    }
+    <button onClick={()=>setShow(!show)}>Show</button>
+    {/* <API01/> */}
+   </div>
   );
 }
-
-export default App;
